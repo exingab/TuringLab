@@ -1081,17 +1081,17 @@
 		#footer h2
 		{
 			font-size: 1.35em;
-			color: #fff;
+			color: #000;
 		}
 
 		#footer strong
 		{
-			color: #fff;
+			color: #009;
 		}
 
 		#footer a
 		{
-			color: #999;
+			color: #900;
 		}
 
 		#footer ul.style2 li
