@@ -1,212 +1,183 @@
 
 
-
-
-
-
-
-
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>TuringLab Home Page</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" rel="stylesheet" type="text/css" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/config.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
-		
-	<body class="right-sidebar">
-<a href= "http://www.facebook.com" target="_parent" class="nbs-social-facebook"></a> 
-<a href="http://www.twitter.com" target="_parent" class="nbs-social-twitter"></a> 
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>TuringLab Login Form</title>
+
+  
+
+ 
+
+    <style>
+html,
+body {
+  width: 100%;
+  height: 100%;
+  
+}
+body {
+  margin: 50px auto;
+  display: table;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  background: #81b5d6;
+  max-width: 33em;
+  background-image: url("pic08888.jpg")
+}
+.wrap {
+  margin-top:300px;
+}
+
+.flip-container {
+  perspective: 1000;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+}
+
+.logged-in {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back, .back-logo {
+	width: 130px;
+	height: 130px;
+}
+
+.flipper {
+	transition-duration: 0.6s;
+	transform-style: preserve-3d;
+}
+
+.front, 
+.back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+  background-size: cover;
+}
+
+.front {
+	background: url(http://s8.postimg.org/y7z5wso29/Flip_Img.png) 0 0 no-repeat;
+}
+
+.back {
+	transform: rotateY(180deg);
+	background: url(http://s8.postimg.org/u04do1mmp/Flip_Img2.png) 0 0 no-repeat;
+}
+
+h1 {
+   font-size: 40px;
+  font-weight: 400;
+  color: #FFF;
+}
+h1 span {
+  font-size: 60px;
+  font-weight: 400;
+  color: #fff;
+}
+h1 span2 {
+  font-size: 60px;
+  font-weight: 400;
+  color: #5379fa;
+}
+input[type=text],
+input[type=password] {
+  color:#FFF;
+  background: #68add8; /* Old browsers */
+  background: linear-gradient(45deg,  #68add8 0%,#8cbede 100%); /* W3C */
+  width:250px;
+  height:40px;
+  margin: 0 auto 10px auto;
+  font-size:14px;
+  padding-left:15px;
+  border:none;
+  box-shadow: -3px 3px #679acb ;
+  -webkit-appearance:none;
+  border-radius:0;
+  border-top: 1px solid #92c5e2;
+  border-right: 1px solid #92c5e2;
+}
+input::-webkit-input-placeholder { 
+  color: #FFF;
+}
+input:focus {
+  outline:none;
+}
+input[type=submit] {
+    color: #fff;
+    background-color:#3f88b8;
+    font-size: 14px;
+    height: 40px;
+    border: none;
+    margin: 0 auto 0 17px;
+    padding: 0 20px 0 20px;
+    -webkit-appearance:none;
+    border-radius:0;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color:#3f7ba2;
+}
+a {
+  color:#1c70a7;
+  font-weight:600;
+  font-size:12px;
+  text-decoration:none;
+}
+a:hover {
+  color:#3f7ba2;
+}
+
+
+
+
+
+
+</style>
+
+    <script src="js/prefixfree.min.js"></script>
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+
+<body>
+
+  <!--    
+        JS Credits to bartveneman
+        Comments? Feel free!
+ -->
+
+
+
+  <h1 class="text" id="welcome">Welcome to <span>Turing</span><span2>Lab.</span2></h1><br><br><br>
+
+  <form method='post' id="theForm">
+    <input type='text' id="username" name='username' placeholder='Username'><br>
+    <input type='password' id='password' name='password' placeholder='Password'><br><br>
+
+    <div class='login'>
+      
+	 
+      <input type='submit' value='Login'><br><br>
+	  <a href= "http://www.facebook.com" target="_parent" class="nbs-social-facebook"></a> 
+
+	   <a href="http://www.twitter.com" target="_parent" class="nbs-social-twitter"></a> 
 <a href="https://plus.google.com" target="_parent"class="nbs-social-googleplus"></a> 
 <a href="http://www.youtube.com" target="_parent" class="nbs-social-youtube"></a>
-		
-			<div id="header-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="12u">
-						
-							
-								<header id="header">
-									<div class="inner">
-									
-										
-											<h1><a href="aboutus.html" target="_parent">TuringLab</a></h1>
-										
-										
-											<nav id="nav">
-												<ul>
-													<li><a href="index.html" target="_parent">Home</a></li>
-													<li>
-														<span>Information</span>
-														<ul>
-															<li><a href="login.html" target="_parent">Student Info</a></li>
-															<li><a href="school.html" target="_parent">School Info</a></li>
-															
-															<li><a href="aboutus.html" target="_parent">About TuringLab</a></li>
-														</ul>
-													</li>
-												
-													<li><a href="contactus.html" target="_parent">Contact Us</a></li>
-													
-												</ul>
-											</nav>
-									
-									</div>
-								</header>
+    </div><!-- /login -->
+  </form>
+</div><!-- /wrap -->
 
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-			<div id="main-wrapper">
-				<div class="main-wrapper-style2">
-					<div class="inner">
-						<div class="container">
-							<div class="row">
-								<div class="8u">
-									<div id="content skel-cell-important">
 
-									
-									
-											<article>
-												<header class="major">
-													<h2>Welcome to "TuringLab's  Mobile App." Home Page</h2>
-													<span class="byline">By using TuringLab's mobile application enables you receive updated information about individual student 
-													and respective educational institution. </span>
-												</header>
-												
-												<span class="image image-full"><img src="images/pic08888.jpg" alt="Go to TuringLab website" /></span>
-												
-												<p>TuringLab makes accessing Student and other related information where ever you are. As long as 
-													you have an Internet connection. Which enables you manage and control the learning process.
-												.</p>
-												
-												<h3>More Information</h3>
-												<p>Try our new Student and related data retrieving Application.
-												</p>
-											</article>
-								
-									</div>
-								</div>
-								<div class="4u">
-									<div id="sidebar">
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
 
-									
-									
-											<section>
-												<header class="major">
-													<h2>More About TuringLab</h2>
-												</header>
-												<p>TuringLab is established on a partner basis, developing and localizing open source Software, for the benefit of respective parties
-													by providing reliable and up to date information for respective customers.	
-												</p>
-												<footer>
-													<a href="login.html" target="_parent"  class="button fa fa-info-circle"> Login in For Student Info</a>
-												</footer>
-											</section>
+  <script src="js/index.js"></script>
 
-											<section>
-												<header class="major">
-													<h2>Other related Links</h2>
-												</header>
-												<ul class="style2">
-												    <li><a href="http://www.temarinet.com/" target="_parent">temari net</a></li>
-													<li><a href="http://www.aau.edu.et/march/" target="_parent">Addis Ababa University official website</a></li>
-													<li><a href="http://www.studentscholarshipsearch.com/" target="_parent">Learn abroad</a></li>
-													<li><a href="http://whc.unesco.org/en/statesparties/ET/" target="_parent">Natural Heritage of Ethiopia </a></li>
-													<li><a href="http://www.mplonline.org/" target="_parent">Digital Libraries</a></li>
-													
-													
-												</ul>
-												<footer>
-													<a href="school.html" target="_parent" class="button fa fa-arrow-circle-o-right">School Info</a>
-												</footer>
-											</section>
-								
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-		<!-- Footer Wrapper -->
-			<div id="footer-wrapper">
-				<footer id="footer" class="container">
-					<div class="row">
-						<div class="3u">
-						
-							<!-- Links -->
-								<section>
-									<h2>More Links</h2>
-									<ul class="style2">
-										<li><a href="http://info.moe.gov.et/ates.shtml" target="_parent">Ministry of Education</a></li>
-										<li><a href="http://www.diretube.com/article.html" target="_parent">Dire Tube Latest Articles</a></li>
-										<li><a href="http://ethiopia.britishcouncil.org/#">British Council Ethiopia</a></li>
-										
-										
-									</ul>
-								</section>
-						
-						</div>
-						<div class="3u">
-						
-							<!-- Links -->
-								<section>
-									<h2>Company Links</h2>
-									<ul class="style2">
-										<li><a href="contactus.html" target="_parent">Contacts</a></li>
-										<li><a href="contactus.html">Address and Location</a></li>
-										<li><a href="license.html" target="_parent">Terms and Conditions</a></li>
-										
-									</ul>
-								</section>
-						
-					
-								
-						
-						</div>
-						<div class="6u">
-						
-							<!-- About -->
-								<section>
-									<h2><strong>Help and Support by</strong> TuringLab</h2>
-									<p>Dear Customers <strong><a href="aboutus.html" target="_parent">TuringLab</a></strong>, is provided for you in order to ease processes  If you have any suggestions,
-									Contact us.  Tank you for your support. 
-									</p>
-									<a href="http://www.turinglab.com" class="button alt fa fa-arrow-circle-o-right">More @ turinglab.com</a>
-								</section>
-						
-							<!-- Contact -->
-								
-						
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="12u">
-							<div id="copyright">
-								&copy;2014  All rights reserved:  Fantayeneh, Endalkachew and Abinet.
-							
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div>
-			
+</body>
 
-	</body>
 </html>
