@@ -207,4 +207,21 @@ a:hover {
 .header div span{
 	color: #5379fa !important;
 }
+section,
+	article
+	{
+		margin-bottom: 5em;
+	}
+	
+	section > :last-child,
+	article > :last-child
+	{
+		margin-bottom: 0;
+	}
+
+	section:last-child,
+	article:last-child
+	{
+		margin-bottom: 0;
+	}
 
